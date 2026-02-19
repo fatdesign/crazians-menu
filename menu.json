@@ -112,6 +112,33 @@
           }
         }
       ]
+    },
+    {
+      "id": "cocktails",
+      "name": {
+        "de": "Cocktails",
+        "en": "Cocktails",
+        "tr": "Cocktails",
+        "es": "Cocktails"
+      },
+      "items": [
+        {
+          "name": {
+            "de": "Pina Colada",
+            "en": "Pina Colada",
+            "tr": "Pina Colada",
+            "es": "Pina Colada"
+          },
+          "price": "12.90",
+          "isSoldOut": false,
+          "desc": {
+            "de": "",
+            "en": "",
+            "tr": "",
+            "es": ""
+          }
+        }
+      ]
     }
   ]
 }
