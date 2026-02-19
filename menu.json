@@ -103,6 +103,7 @@
             "es": "Salsa de Chile Extra"
           },
           "price": "2.50",
+          "isSoldOut": true,
           "desc": {
             "de": "Für extra Scharfe!",
             "en": "For those who like it extra hot!",
@@ -129,7 +130,7 @@
             "es": "Pina Colada"
           },
           "price": "12.90",
-          "isSoldOut": false,
+          "isSoldOut": true,
           "desc": {
             "de": "",
             "en": "",
