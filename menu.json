@@ -130,7 +130,7 @@
             "es": "Pina Colada"
           },
           "price": "12.90",
-          "isSoldOut": true,
+          "isSoldOut": false,
           "desc": {
             "de": "",
             "en": "",
