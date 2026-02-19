@@ -63,6 +63,9 @@ document.addEventListener('DOMContentLoaded', async () => {
         mobileCategoryList.innerHTML = '';
 
         menuData.categories.forEach((cat, index) => {
+            const activeItems = cat.items.filter(item => item.isSoldOut !== true);
+            if (activeItems.length === 0) return; // Skip empty categories
+
             const catName = cat.name[lang] || cat.name['de'];
 
             // Desktop Nav
@@ -81,9 +84,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             section.className = 'menu-section';
 
             let itemsHtml = '';
-            cat.items.forEach((item, itemIdx) => {
-                if (item.isSoldOut === true) return; // Skip sold out items
-
+            activeItems.forEach((item, itemIdx) => {
                 const itemName = item.name[lang] || item.name['de'];
                 const itemDesc = item.desc ? (item.desc[lang] || item.desc['de']) : '';
 
