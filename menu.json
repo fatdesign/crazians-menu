@@ -17,6 +17,7 @@
             "es": "Curry Panang"
           },
           "price": "12.90",
+          "isSoldOut": true,
           "desc": {
             "de": "Traditionelle rote Currypaste mit Kokosmilch, Hühnerfleisch, Gemüse, Limettengras, Thai Basilikum, dazu Jasminreis. (Leicht scharf)",
             "en": "Traditional red curry paste with coconut milk, chicken, vegetables, lemongrass, Thai basil, served with jasmine rice. (Mildly spicy)",
