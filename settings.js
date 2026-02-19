@@ -26,7 +26,7 @@ const SETTINGS = {
     },
 
     // 3. API & STORAGE
-    proxyUrl: "https://crazian-menu-proxy.f-klavun.workers.dev", // Your Cloudflare Worker URL
+    proxyUrl: "https://crazians-menu-proxy.f-klavun.workers.dev", // Your Cloudflare Worker URL
     storageKey: "crazians_lang", // Unique key for localStorage
 
     // 4. FEATURES
