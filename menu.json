@@ -130,7 +130,7 @@
             "es": "Pina Colada"
           },
           "price": "12.90",
-          "isSoldOut": false,
+          "isSoldOut": true,
           "desc": {
             "de": "",
             "en": "",
@@ -146,7 +146,7 @@
             "es": "Moscow Mule"
           },
           "price": "16.90",
-          "isSoldOut": false,
+          "isSoldOut": true,
           "desc": {
             "de": "",
             "en": "",
