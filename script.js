@@ -46,10 +46,12 @@ document.addEventListener('DOMContentLoaded', async () => {
     const defaultLang = typeof SETTINGS !== 'undefined' ? SETTINGS.defaultLang : 'de';
     let currentLang = localStorage.getItem(storageKey) || defaultLang;
 
-    // Fetch menu data
+    // Fetch menu data with cache-busting
     let menuData;
     try {
-        const res = await fetch('./menu.json');
+        const res = await fetch(`./menu.json?t=${Date.now()}`, {
+            cache: 'no-store'
+        });
         menuData = await res.json();
     } catch (e) {
         menuApp.innerHTML = '<p style="text-align:center;color:#a0a0a0;padding:4rem;">Speisekarte konnte nicht geladen werden.</p>';
