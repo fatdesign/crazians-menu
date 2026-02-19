@@ -1,0 +1,88 @@
+{
+    "categories": [
+        {
+            "id": "food",
+            "name": {
+                "de": "Speisen",
+                "en": "Food"
+            },
+            "items": [
+                {
+                    "name": {
+                        "de": "Panang Curry",
+                        "en": "Panang Curry"
+                    },
+                    "price": "12.90",
+                    "desc": {
+                        "de": "Traditionelle rote Currypaste mit Kokosmilch, Hühnerfleisch, Gemüse, Limettengras, Thai Basilikum, dazu Jasminreis. (Leicht scharf)",
+                        "en": "Traditional red curry paste with coconut milk, chicken, vegetables, lemongrass, Thai basil, served with jasmine rice. (Mildly spicy)"
+                    }
+                },
+                {
+                    "name": {
+                        "de": "Pad Kra Pao",
+                        "en": "Pad Kra Pao"
+                    },
+                    "price": "13.50",
+                    "desc": {
+                        "de": "Typisches Streetfood, würziges Rinderfaschiertes aus dem Wok mit Königsbasilikum, Gemüse, Chili und Spiegelei, dazu Jasminreis.",
+                        "en": "Typical street food, spicy minced beef from the wok with king basil, vegetables, chili and fried egg, served with jasmine rice."
+                    }
+                },
+                {
+                    "name": {
+                        "de": "Hühnerfleisch Kra Pao",
+                        "en": "Chicken Kra Pao"
+                    },
+                    "price": "12.90",
+                    "desc": {
+                        "de": "Süß-würzige Hühnerstreifen aus dem Wok mit Königsbasilikum, Gemüse und dazu Jasminreis.",
+                        "en": "Sweet and savory chicken strips from the wok with king basil, vegetables and jasmine rice."
+                    }
+                },
+                {
+                    "name": {
+                        "de": "Butter Chicken",
+                        "en": "Butter Chicken"
+                    },
+                    "price": "13.50",
+                    "desc": {
+                        "de": "Herzhaftes indisches Curry mit Hühnerfleisch in cremiger Tomaten-Butter-Sahne-Sauce, serviert mit Roti und Jasminreis.",
+                        "en": "Hearty Indian curry with chicken in a creamy tomato-butter-cream sauce, served with roti and jasmine rice."
+                    }
+                },
+                {
+                    "name": {
+                        "de": "Frühlingsrollen",
+                        "en": "Spring Rolls"
+                    },
+                    "price": "5.50",
+                    "desc": {
+                        "de": "2 Stk. Handgemachte Frühlingsrollen gefüllt mit Rind, Glasnudeln und Gemüse. (Vegan möglich)",
+                        "en": "2 pcs. Handmade spring rolls filled with beef, glass noodles and vegetables. (Vegan option available)"
+                    }
+                }
+            ]
+        },
+        {
+            "id": "specials",
+            "name": {
+                "de": "Wochenspecials",
+                "en": "Weekly Specials"
+            },
+            "items": [
+                {
+                    "name": {
+                        "de": "Chilisoße Extra",
+                        "en": "Extra Chili Sauce"
+                    },
+                    "price": "2.50",
+                    "desc": {
+                        "de": "Für extra Scharfe!",
+                        "en": "For those who like it extra hot!"
+                    }
+                }
+            ]
+        }
+    ]
+}
