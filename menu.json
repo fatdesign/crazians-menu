@@ -137,6 +137,22 @@
             "tr": "",
             "es": ""
           }
+        },
+        {
+          "name": {
+            "de": "Moscow Mule",
+            "en": "Moscow Mule",
+            "tr": "Moscow Mule",
+            "es": "Moscow Mule"
+          },
+          "price": "16.90",
+          "isSoldOut": false,
+          "desc": {
+            "de": "",
+            "en": "",
+            "tr": "",
+            "es": ""
+          }
         }
       ]
     }
