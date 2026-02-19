@@ -1,116 +1,116 @@
 {
-    "categories": [
+  "categories": [
+    {
+      "id": "food",
+      "name": {
+        "de": "Speisen",
+        "en": "Food",
+        "tr": "Yemekler",
+        "es": "Comidas"
+      },
+      "items": [
         {
-            "id": "food",
-            "name": {
-                "de": "Speisen",
-                "en": "Food",
-                "tr": "Yemekler",
-                "es": "Comidas"
-            },
-            "items": [
-                {
-                    "name": {
-                        "de": "Panang Curry",
-                        "en": "Panang Curry",
-                        "tr": "Panang Köri",
-                        "es": "Curry Panang"
-                    },
-                    "price": "12.90",
-                    "desc": {
-                        "de": "Traditionelle rote Currypaste mit Kokosmilch, Hühnerfleisch, Gemüse, Limettengras, Thai Basilikum, dazu Jasminreis. (Leicht scharf)",
-                        "en": "Traditional red curry paste with coconut milk, chicken, vegetables, lemongrass, Thai basil, served with jasmine rice. (Mildly spicy)",
-                        "tr": "Hindistan cevizi sütü, tavuk eti, sebzeler, limon otu, Thai fesleğeni ve yasmin pirinci ile geleneksel kırmızı köri ezmesi. (Hafif acı)",
-                        "es": "Pasta de curry rojo tradicional con leche de coco, carne de pollo, verduras, hierba de limón, albahaca tailandesa, servida con arroz jazmín. (Ligeramente picante)"
-                    }
-                },
-                {
-                    "name": {
-                        "de": "Pad Kra Pao",
-                        "en": "Pad Kra Pao",
-                        "tr": "Pad Kra Pao",
-                        "es": "Pad Kra Pao"
-                    },
-                    "price": "13.50",
-                    "desc": {
-                        "de": "Typisches Streetfood, würziges Rinderfaschiertes aus dem Wok mit Königsbasilikum, Gemüse, Chili und Spiegelei, dazu Jasminreis.",
-                        "en": "Typical street food, spicy minced beef from the wok with king basil, vegetables, chili and fried egg, served with jasmine rice.",
-                        "tr": "Wokta pişirilmiş kral fesleğeni, sebze, chili ve sahanda yumurta ile baharatlı kıyma, yasmin pirinci eşliğinde tipik sokak lezzeti.",
-                        "es": "Comida callejera típica, carne picada picante al wok con albahaca real, verduras, chile y huevo frito, servida con arroz jazmín."
-                    }
-                },
-                {
-                    "name": {
-                        "de": "Hühnerfleisch Kra Pao",
-                        "en": "Chicken Kra Pao",
-                        "tr": "Tavuklu Kra Pao",
-                        "es": "Pollo Kra Pao"
-                    },
-                    "price": "12.90",
-                    "desc": {
-                        "de": "Süß-würzige Hühnerstreifen aus dem Wok mit Königsbasilikum, Gemüse und dazu Jasminreis.",
-                        "en": "Sweet and savory chicken strips from the wok with king basil, vegetables and jasmine rice.",
-                        "tr": "Wokta kral fesleğeni ve sebzelerle pişirilmiş tatlı-baharatlı tavuk dilimleri, yasmin pirinci eşliğinde.",
-                        "es": "Tirat de pollo dulces y picantes al wok con albahaca real, verduras y arroz jazmín."
-                    }
-                },
-                {
-                    "name": {
-                        "de": "Butter Chicken",
-                        "en": "Butter Chicken",
-                        "tr": "Tereyağlı Tavuk (Butter Chicken)",
-                        "es": "Pollo a la Mantequilla (Butter Chicken)"
-                    },
-                    "price": "13.50",
-                    "desc": {
-                        "de": "Herzhaftes indisches Curry mit Hühnerfleisch in cremiger Tomaten-Butter-Sahne-Sauce, serviert mit Roti und Jasminreis.",
-                        "en": "Hearty Indian curry with chicken in a creamy tomato-butter-cream sauce, served with roti and jasmine rice.",
-                        "tr": "Kremalı domatesli tereyağlı sos içinde tavuk eti ile hazırlanan doyurucu Hint körisi, roti ve yasmin pirinci ile servis edilir.",
-                        "es": "Curry indio abundante con pollo en una cremosa salsa de tomate, mantequilla y nata, servido con roti y arroz jazmín."
-                    }
-                },
-                {
-                    "name": {
-                        "de": "Frühlingsrollen",
-                        "en": "Spring Rolls",
-                        "tr": "Çin Böreği (Spring Rolls)",
-                        "es": "Rollitos de Primavera"
-                    },
-                    "price": "5.50",
-                    "desc": {
-                        "de": "2 Stk. Handgemachte Frühlingsrollen gefüllt mit Rind, Glasnudeln und Gemüse. (Vegan möglich)",
-                        "en": "2 pcs. Handmade spring rolls filled with beef, glass noodles and vegetables. (Vegan option available)",
-                        "tr": "Sığır eti, cam erişte ve sebze dolgulu, 2 adet el yapımı Çin böreği. (Vegan seçenek mevcut)",
-                        "es": "2 piezas de rollitos de primavera hechos a mano rellenos de carne de res, fideos de cristal y verduras. (Opción vegana disponible)"
-                    }
-                }
-            ]
+          "name": {
+            "de": "Panang Curry",
+            "en": "Panang Curry",
+            "tr": "Panang Köri",
+            "es": "Curry Panang"
+          },
+          "price": "12.90",
+          "desc": {
+            "de": "Traditionelle rote Currypaste mit Kokosmilch, Hühnerfleisch, Gemüse, Limettengras, Thai Basilikum, dazu Jasminreis. (Leicht scharf)",
+            "en": "Traditional red curry paste with coconut milk, chicken, vegetables, lemongrass, Thai basil, served with jasmine rice. (Mildly spicy)",
+            "tr": "Hindistan cevizi sütü, tavuk eti, sebzeler, limon otu, Thai fesleğeni ve yasmin pirinci ile geleneksel kırmızı köri ezmesi. (Hafif acı)",
+            "es": "Pasta de curry rojo tradicional con leche de coco, carne de pollo, verduras, hierba de limón, albahaca tailandesa, servida con arroz jazmín. (Ligeramente picante)"
+          }
         },
         {
-            "id": "specials",
-            "name": {
-                "de": "Wochenspecials",
-                "en": "Weekly Specials",
-                "tr": "Haftalık Spesiyaller",
-                "es": "Especiales Semanales"
-            },
-            "items": [
-                {
-                    "name": {
-                        "de": "Chilisoße Extra",
-                        "en": "Extra Chili Sauce",
-                        "tr": "Ekstra Chili Sosu",
-                        "es": "Salsa de Chile Extra"
-                    },
-                    "price": "2.50",
-                    "desc": {
-                        "de": "Für extra Scharfe!",
-                        "en": "For those who like it extra hot!",
-                        "tr": "Ekstra acı sevenler için!",
-                        "es": "¡Para los que les gusta extra picante!"
-                    }
-                }
-            ]
+          "name": {
+            "de": "Pad Kra Pao",
+            "en": "Pad Kra Pao",
+            "tr": "Pad Kra Pao",
+            "es": "Pad Kra Pao"
+          },
+          "price": "13.50",
+          "desc": {
+            "de": "Typisches Streetfood, würziges Rinderfaschiertes aus dem Wok mit Königsbasilikum, Gemüse, Chili und Spiegelei, dazu Jasminreis.",
+            "en": "Typical street food, spicy minced beef from the wok with king basil, vegetables, chili and fried egg, served with jasmine rice.",
+            "tr": "Wokta pişirilmiş kral fesleğeni, sebze, chili ve sahanda yumurta ile baharatlı kıyma, yasmin pirinci eşliğinde tipik sokak lezzeti.",
+            "es": "Comida callejera típica, carne picada picante al wok con albahaca real, verduras, chile y huevo frito, servida con arroz jazmín."
+          }
+        },
+        {
+          "name": {
+            "de": "Hühnerfleisch Kra Pao",
+            "en": "Chicken Kra Pao",
+            "tr": "Tavuklu Kra Pao",
+            "es": "Pollo Kra Pao"
+          },
+          "price": "12.90",
+          "desc": {
+            "de": "Süß-würzige Hühnerstreifen aus dem Wok mit Königsbasilikum, Gemüse und dazu Jasminreis.",
+            "en": "Sweet and savory chicken strips from the wok with king basil, vegetables and jasmine rice.",
+            "tr": "Wokta kral fesleğeni ve sebzelerle pişirilmiş tatlı-baharatlı tavuk dilimleri, yasmin pirinci eşliğinde.",
+            "es": "Tirat de pollo dulces y picantes al wok con albahaca real, verduras y arroz jazmín."
+          }
+        },
+        {
+          "name": {
+            "de": "Butter Chicken",
+            "en": "Butter Chicken",
+            "tr": "Tereyağlı Tavuk (Butter Chicken)",
+            "es": "Pollo a la Mantequilla (Butter Chicken)"
+          },
+          "price": "13.50",
+          "desc": {
+            "de": "Herzhaftes indisches Curry mit Hühnerfleisch in cremiger Tomaten-Butter-Sahne-Sauce, serviert mit Roti und Jasminreis.",
+            "en": "Hearty Indian curry with chicken in a creamy tomato-butter-cream sauce, served with roti and jasmine rice.",
+            "tr": "Kremalı domatesli tereyağlı sos içinde tavuk eti ile hazırlanan doyurucu Hint körisi, roti ve yasmin pirinci ile servis edilir.",
+            "es": "Curry indio abundante con pollo en una cremosa salsa de tomate, mantequilla y nata, servido con roti y arroz jazmín."
+          }
+        },
+        {
+          "name": {
+            "de": "Frühlingsrollen",
+            "en": "Spring Rolls",
+            "tr": "Çin Böreği (Spring Rolls)",
+            "es": "Rollitos de Primavera"
+          },
+          "price": "5.50",
+          "desc": {
+            "de": "2 Stk. Handgemachte Frühlingsrollen gefüllt mit Rind, Glasnudeln und Gemüse. (Vegan möglich)",
+            "en": "2 pcs. Handmade spring rolls filled with beef, glass noodles and vegetables. (Vegan option available)",
+            "tr": "Sığır eti, cam erişte ve sebze dolgulu, 2 adet el yapımı Çin böreği. (Vegan seçenek mevcut)",
+            "es": "2 piezas de rollitos de primavera hechos a mano rellenos de carne de res, fideos de cristal y verduras. (Opción vegana disponible)"
+          }
         }
-    ]
+      ]
+    },
+    {
+      "id": "specials",
+      "name": {
+        "de": "Wochenspecials",
+        "en": "Weekly Specials",
+        "tr": "Haftalık Spesiyaller",
+        "es": "Especiales Semanales"
+      },
+      "items": [
+        {
+          "name": {
+            "de": "Chilisoße Extra",
+            "en": "Extra Chili Sauce",
+            "tr": "Ekstra Chili Sosu",
+            "es": "Salsa de Chile Extra"
+          },
+          "price": "2.50",
+          "desc": {
+            "de": "Für extra Scharfe!",
+            "en": "For those who like it extra hot!",
+            "tr": "Ekstra acı sevenler için!",
+            "es": "¡Para los que les gusta extra picante!"
+          }
+        }
+      ]
+    }
+  ]
 }
