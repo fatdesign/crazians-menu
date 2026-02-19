@@ -1,5 +1,5 @@
 // ============================================
-// CRAZIANS ADMIN - CORE LOGIC (Proxy Version)
+// ADMIN PANEL - CORE LOGIC
 // ============================================
 
 let sessionPassword = '';
@@ -24,6 +24,35 @@ const catModal = document.getElementById('cat-modal');
 const catForm = document.getElementById('cat-form');
 const catModalCancel = document.getElementById('cat-modal-cancel');
 
+// --- White-Label Hydration ---
+const hydrateAdminUI = () => {
+    if (typeof SETTINGS === 'undefined') return;
+
+    // 1. Inject Text
+    document.querySelectorAll('[data-hydrate]').forEach(el => {
+        const key = el.dataset.hydrate;
+        if (SETTINGS[key]) {
+            el.textContent = SETTINGS[key];
+        }
+    });
+
+    // 2. Inject CSS Variables
+    const root = document.documentElement;
+    const theme = SETTINGS.theme;
+    if (theme) {
+        root.style.setProperty('--bg', theme.bgPrimary);
+        root.style.setProperty('--bg-header', theme.bgHeader);
+        root.style.setProperty('--gold', theme.accentTeal);
+        root.style.setProperty('--accent-pink', theme.accentPink);
+        root.style.setProperty('--text', theme.textPrimary);
+        root.style.setProperty('--text-muted', theme.textSecondary);
+        root.style.setProperty('--font', theme.fontHeading);
+        root.style.setProperty('--font-body', theme.fontBody);
+    }
+};
+
+hydrateAdminUI();
+
 // ---- Authentication ----
 loginForm.addEventListener('submit', async (e) => {
     e.preventDefault();
@@ -33,8 +62,6 @@ loginForm.addEventListener('submit', async (e) => {
     submitBtn.disabled = true;
     loginError.classList.add('hidden');
 
-    // We try to load the menu with the provided password.
-    // If it works, the password is correct.
     sessionPassword = pw;
 
     try {
@@ -75,10 +102,10 @@ async function proxyRequest(method, body = null) {
     };
     if (body) options.body = JSON.stringify(body);
 
-    const res = await fetch(ADMIN_CONFIG.proxyUrl, options);
+    const proxyUrl = typeof SETTINGS !== 'undefined' ? SETTINGS.proxyUrl : '';
+    const res = await fetch(proxyUrl, options);
     if (!res.ok) {
         const err = await res.json().catch(() => ({}));
-        // We include the status code in the message for robust error handling
         throw new Error(`${res.status}: ${err.error || 'Request failed'}`);
     }
     return res.json();
@@ -96,12 +123,10 @@ async function loadMenu() {
         categoriesContainer.innerHTML = '';
         renderDashboard();
     } catch (err) {
-        // Strictly block if the server says 401 (Unauthorized)
         if (err.message.startsWith('401:')) {
             throw err;
         }
 
-        // Fallback to local file only for other errors (e.g. network/proxy down)
         console.warn('Proxy nicht erreichbar, lade lokale menu.json:', err.message);
         try {
             const res = await fetch('../menu.json');
@@ -114,7 +139,7 @@ async function loadMenu() {
             categoriesContainer.innerHTML = `
                 <div style="text-align:center;padding:3rem;color:#c0392b;">
                     <p>❌ Proxy nicht erreichbar und keine lokale menu.json gefunden.</p>
-                    <p style="font-size:0.85rem;color:#888;margin-top:0.5rem;">Bitte <code>admin/config.js</code> (proxyUrl) prüfen.</p>
+                    <p style="font-size:0.85rem;color:#888;margin-top:0.5rem;">Bitte <code>settings.js</code> (proxyUrl) prüfen.</p>
                 </div>`;
         }
     }
@@ -125,7 +150,7 @@ function showConfigNotice(errMsg = '') {
     notice.className = 'config-notice';
     notice.innerHTML = `⚠️ <strong>Lokaler Modus:</strong> Cloudflare Worker konnte nicht erreicht werden. 
     <br><small style="opacity:0.8;">Fehler: ${errMsg}</small>
-    <br><br>Änderungen werden nur lokal angezeigt und nicht gespeichert. Bitte <code>proxyUrl</code> in <code>admin/config.js</code> prüfen.`;
+    <br><br>Änderungen werden nur lokal angezeigt und nicht gespeichert. Bitte <code>settings.js</code> prüfen.`;
     categoriesContainer.appendChild(notice);
 }
 
@@ -139,7 +164,6 @@ function renderDashboard() {
         const block = document.createElement('div');
         block.className = 'category-block';
 
-        // Admin view always uses German as primary label
         const catName = cat.name['de'] || 'N/A';
 
         block.innerHTML = `
@@ -304,7 +328,7 @@ catForm.addEventListener('submit', (e) => {
 
 function deleteCategory(catIdx) {
     const cat = menuData.categories[catIdx];
-    if (!confirm(`Kategorie "${cat.name}" mit ${cat.items.length} Gerichten wirklich löschen?`)) return;
+    if (!confirm(`Kategorie "${cat.name.de}" mit ${cat.items.length} Gerichten wirklich löschen?`)) return;
     menuData.categories.splice(catIdx, 1);
     renderDashboard();
 }
@@ -326,7 +350,7 @@ async function saveMenu() {
         const content = btoa(unescape(encodeURIComponent(jsonString)));
 
         const result = await proxyRequest('POST', { content, sha: currentFileSha });
-        currentFileSha = result.content.sha; // Update SHA for next save
+        currentFileSha = result.content.sha;
         setSaveStatus('✓ Gespeichert! Menü wird in ca. 3 Min. aktualisiert.', 'success');
     } catch (err) {
         setSaveStatus(`Fehler: ${err.message}`, 'error');

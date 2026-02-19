@@ -1,4 +1,39 @@
 document.addEventListener('DOMContentLoaded', async () => {
+    // --- White-Label Hydration ---
+    const hydrateUI = () => {
+        if (typeof SETTINGS === 'undefined') return;
+
+        // 1. Inject Text Content
+        document.querySelectorAll('[data-hydrate]').forEach(el => {
+            const key = el.dataset.hydrate;
+            if (SETTINGS[key]) {
+                if (el.tagName === 'TITLE') {
+                    document.title = `${SETTINGS[key]} | ${SETTINGS.tagline}`;
+                } else if (el.tagName === 'META' && key === 'metaDescription') {
+                    el.content = SETTINGS[key];
+                } else {
+                    el.textContent = SETTINGS[key];
+                }
+            }
+        });
+
+        // 2. Inject CSS Variables
+        const root = document.documentElement;
+        const theme = SETTINGS.theme;
+        if (theme) {
+            root.style.setProperty('--bg-primary', theme.bgPrimary);
+            root.style.setProperty('--bg-header', theme.bgHeader);
+            root.style.setProperty('--accent-pink', theme.accentPink);
+            root.style.setProperty('--accent-teal', theme.accentTeal);
+            root.style.setProperty('--text-primary', theme.textPrimary);
+            root.style.setProperty('--text-secondary', theme.textSecondary);
+            root.style.setProperty('--font-heading', theme.fontHeading);
+            root.style.setProperty('--font-body', theme.fontBody);
+        }
+    };
+
+    hydrateUI();
+
     const menuApp = document.getElementById('menu-app');
     const categoryList = document.getElementById('category-list');
     const mobileCategoryList = document.getElementById('mobile-category-list');
@@ -7,7 +42,9 @@ document.addEventListener('DOMContentLoaded', async () => {
     const closeMobileMenu = document.getElementById('close-mobile-menu');
 
     // Language State
-    let currentLang = localStorage.getItem('crazians_lang') || 'de';
+    const storageKey = typeof SETTINGS !== 'undefined' ? SETTINGS.storageKey : 'shaker_lang';
+    const defaultLang = typeof SETTINGS !== 'undefined' ? SETTINGS.defaultLang : 'de';
+    let currentLang = localStorage.getItem(storageKey) || defaultLang;
 
     // Fetch menu data
     let menuData;
@@ -126,7 +163,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     document.querySelectorAll('.lang-btn').forEach(btn => {
         btn.addEventListener('click', () => {
             currentLang = btn.dataset.lang;
-            localStorage.setItem('crazians_lang', currentLang);
+            localStorage.setItem(storageKey, currentLang);
             renderMenu(currentLang);
         });
     });

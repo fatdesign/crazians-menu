@@ -4,10 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>C R A Z I A N ' s | Simply Authentic Asian Food</title>
-    <meta name="description"
-        content="Scharf, süß & sauer. Authentische asiatische Küche in Hallein. Entdecken Sie unsere Speisekarte digital.">
+    <title data-hydrate="restaurantName">C R A Z I A N ' s</title>
+    <meta name="description" content="" data-hydrate="metaDescription">
     <!-- Favicon would go here -->
+    <script src="settings.js"></script>
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -27,7 +27,7 @@
     <header class="main-header glass animate-fade-in">
         <div class="container header-content">
             <div class="brand">
-                <span class="gold-text">C R A Z I A N ' s</span>
+                <span class="gold-text" data-hydrate="restaurantName">C R A Z I A N ' s</span>
             </div>
             <!-- Desktop Nav -->
             <nav class="category-nav desktop-only">
@@ -67,7 +67,7 @@
         <button id="close-mobile-menu" aria-label="Menu schließen">✕</button>
         <div class="mobile-nav-content">
             <div class="mobile-brand">
-                <span class="gold-text">C R A Z I A N ' s</span>
+                <span class="gold-text" data-hydrate="restaurantName">C R A Z I A N ' s</span>
             </div>
             <ul id="mobile-category-list">
                 <!-- Mobile Categories will be injected here -->
@@ -80,8 +80,8 @@
         <section class="hero animate-fade-in">
             <div class="hero-overlay"></div>
             <div class="container hero-content">
-                <h1 class="hero-title">C R A Z I A N ' s</h1>
-                <p class="hero-subtitle">Simply Authentic Asian Food</p>
+                <h1 class="hero-title" data-hydrate="restaurantName">C R A Z I A N ' s</h1>
+                <p class="hero-subtitle" data-hydrate="tagline">Simply Authentic Asian Food</p>
                 <div class="hero-decoration">
                     <span class="line"></span>
                     <span class="icon">❁</span>
@@ -98,7 +98,7 @@
 
     <footer class="glass">
         <div class="container footer-content">
-            <p>&copy; 2026 C R A Z I A N ' s Hallein</p>
+            <p>&copy; <span data-hydrate="footerText">2026 C R A Z I A N ' s Hallein</span></p>
             <p class="nfc-tagline">Scan via NFC for the digital menu</p>
         </div>
     </footer>
