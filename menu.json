@@ -153,6 +153,22 @@
             "tr": "",
             "es": ""
           }
+        },
+        {
+          "name": {
+            "de": "Whiskey",
+            "en": "Whiskey",
+            "tr": "Whiskey",
+            "es": "Whiskey"
+          },
+          "price": "12.80",
+          "isSoldOut": false,
+          "desc": {
+            "de": "",
+            "en": "",
+            "tr": "",
+            "es": ""
+          }
         }
       ]
     }
